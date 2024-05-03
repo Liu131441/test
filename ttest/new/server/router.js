@@ -1,0 +1,22 @@
+let express = require('express')
+let router = express.Router()
+// let user = require('./API/user')
+let info = require('./API/list')
+let pho = require('./API/pho')
+let login = require('./API/login')
+let mycode = require('./API/mycode')
+// let adddb = require('./API/adddb')
+
+// router.get('/user', user.get)
+// router.get('/list/get',info.get)
+// router.post('/list/add',info.add)
+router.post('/pho/post',pho.post)
+// router.post('/adddb/add',adddb.add)
+router.get('/list/update',info.update)
+router.post('/list/create',info.add)
+router.post('/login',login.post)
+router.get('/checklogin',login.get)
+router.post('/mycode',mycode.post)
+router.post('/delete',mycode.delete)
+module.exports = router
+    
